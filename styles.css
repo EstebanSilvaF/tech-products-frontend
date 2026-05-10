@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  padding: 28px 18px 48px;
+  background: linear-gradient(180deg, #f6f8ff 0%, #f4f4f4 65%);
+  color: #0f172a;
+}
+
+h1 {
+  max-width: 980px;
+  margin: 0 auto 18px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.price {
+  margin: 0 0 8px;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.stock {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.72);
+}
