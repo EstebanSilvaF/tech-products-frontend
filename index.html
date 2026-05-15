@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <p class="site-header__eyebrow">Inventario</p>
+      <h1 class="site-header__title">Catálogo de productos</h1>
+      <p class="subtitle">
+        Origen de datos: <code id="api-label" class="api-chip"></code>
+      </p>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div id="products" class="container" role="region" aria-live="polite" aria-label="Listado de productos"></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('api-label').textContent =
+      (window.API_BASE || 'http://localhost:3000').replace(/\/$/, '');
+  </script>
+</body>
+</html>
